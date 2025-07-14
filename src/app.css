@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@plugin "@iconify/tailwind4";
+
+@theme {
+	--font-inter: 'Inter', sans-serif;
+	--font-montserrat: 'Montserrat', sans-serif;
+
+	--color-primary-100: #ebebeb;
+	--color-primary-200: #d8d8d8;
+	--color-primary-300: #d1d1db;
+	--color-primary-400: #9b9bb1;
+	--color-primary-500: #5e5e78;
+	--color-primary-600: #3f3f50;
+	--color-primary-700: #353543;
+	--color-primary-800: #282833;
+	--color-primary-900: #1a1a22;
+
+	--color-secondary: var(--color-amber-400);
+}
+
+:root {
+	@apply bg-primary-700;
+}
+
+.h0 {
+	@apply font-inter text-5xl font-bold;
+}
+
+h1 {
+	@apply font-inter text-2xl md:text-4xl font-bold;
+}
+
+h2 {
+	@apply font-inter text-xl md:text-3xl font-semibold;
+}
+
+h3 {
+	@apply font-inter text-lg md:text-2xl font-semibold;
+}
+
+h4 {
+	@apply font-inter text-lg md:text-xl font-medium;
+}
+
+a,
+p {
+	@apply font-montserrat text-base md:text-lg;
+}
