@@ -5,6 +5,10 @@ query GetPostBySlugQuery($host: String!, $slug: String!) {
 			id
 			slug
 			title
+			seo {
+				title
+				description
+			}
 			tags {
 				slug
 			}
