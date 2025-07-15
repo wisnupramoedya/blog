@@ -1,0 +1,13 @@
+query GetAllPostSlugsQuery($host: String!, $first: Int = 5) {
+	publication(host: $host) {
+		posts(first: $first) {
+			edges {
+				node {
+					slug
+					publishedAt
+					updatedAt
+				}
+			}
+		}
+	}
+}

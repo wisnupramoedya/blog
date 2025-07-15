@@ -8,6 +8,17 @@ const config = {
 	runtimeDir: '.houdini',
 	plugins: {
 		'houdini-svelte': {}
+	},
+	scalars: {
+		DateTime: {
+			type: 'DateTime',
+			unmarshal(val) {
+				return val ? new Date(val) : null;
+			},
+			marshal(date) {
+				return date && date.getTime();
+			}
+		}
 	}
 };
 

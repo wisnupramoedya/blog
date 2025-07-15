@@ -16,4 +16,6 @@
 />
 
 <Introduction />
-<Blog posts={data.posts} pageInfo={data.pageInfo} />
+<section class="bg-primary-800">
+	<Blog posts={data.posts} pageInfo={data.pageInfo} />
+</section>

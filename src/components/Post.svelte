@@ -36,7 +36,7 @@
 	}
 </script>
 
-<article class="text-white px-8 md:px-32 mb-48">
+<article class="text-white">
 	<!-- Header image placeholder -->
 	<div class="relative w-full h-48 rounded-t-4xl overflow-hidden">
 		<img

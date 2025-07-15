@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumb from '../../../components/Breadcrumb.svelte';
 	import Post from '../../../components/Post.svelte';
 	import Seo from '../../../components/SEO.svelte';
 	import type { PageServerData } from './$types';
@@ -10,12 +11,19 @@
 <Seo
 	title={post?.seo?.title || 'Blog Post'}
 	description={post?.seo?.description || 'A detailed blog post by Wisnu Pramoedya.'}
-	keywords={post?.tags?.map(tag => tag.slug).join(', ') || 'blog, web development'}
+	keywords={post?.tags?.map((tag) => tag.slug).join(', ') || 'blog, web development'}
 	url={`/blogs/${post?.slug}`}
 	type="article"
 	image={post?.coverImage?.url}
 />
 
-<section>
+<section class="px-8 md:px-32 mb-48">
+	<Breadcrumb
+		items={[
+			{ name: 'Home', url: '/' },
+			{ name: 'Blog', url: '/blogs' },
+			{ name: post?.title || 'Blog Post', url: `/blogs/${post?.slug}` }
+		]}
+	/>
 	<Post {post} />
 </section>

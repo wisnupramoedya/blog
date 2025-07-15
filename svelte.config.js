@@ -21,7 +21,7 @@ const config = {
 	},
 	csp: {
 		directives: {
-			'script-src': ['self'],
+			'script-src': ['self']
 		},
 		reportOnly: {
 			'script-src': ['self'],

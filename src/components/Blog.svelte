@@ -19,7 +19,7 @@
 	} = $props();
 </script>
 
-<section class="bg-primary-800 px-8 md:px-32 py-24">
+<section class="px-8 md:px-32 py-24">
 	<h1 class="h0 text-primary-100 mb-6 md:mb-9">Blog</h1>
 	<p class="text-primary-300 mb-6 md:mb-9">
 		I learned and recorded all my learnings through blog posts
