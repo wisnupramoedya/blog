@@ -1,47 +1,37 @@
-import { HASHNODE_HOSTNAME } from "$env/static/private";
-import { GetPostBySlugQueryStore } from "$houdini";
-import type { LoadEvent } from "@sveltejs/kit";
+import { HASHNODE_HOSTNAME } from '$env/static/private';
+import { GetPostBySlugQueryStore } from '$houdini';
+import { error, type LoadEvent } from '@sveltejs/kit';
 
 export const load = async (event: LoadEvent) => {
-  const slug = event.params.slug;
+	const slug = event.params.slug;
 
-  if (!slug) {
-    return {
-      status: 404,
-      error: new Error("Blog post not found")
-    };
-  }
+	if (!slug) {
+		error(400, { message: 'Slug parameter is required' });
+	}
 
-  const getBlogPostQuery = new GetPostBySlugQueryStore();
+	const getBlogPostQuery = new GetPostBySlugQueryStore();
 
-  try {
-    const blogPost = await getBlogPostQuery.fetch({
-      event,
-      variables: {
-        host: HASHNODE_HOSTNAME,
-        slug: slug
-      }
-    });
-  
-    if (!blogPost.data?.publication?.post) {
-      return {
-        status: 404,
-        error: new Error("Blog post not found")
-      };
-    }
-  
-    return {
-      status: 200,
-      body: {
-        post: blogPost.data.publication.post,
-      }
-    };
-    
-  } catch (error) {
-    console.error("Error fetching blog post data:", error);
-    return {
-      status: 500,
-      error: new Error("Internal Server Error")
-    };
-  }
-}
+	try {
+		const blogPost = await getBlogPostQuery.fetch({
+			event,
+			variables: {
+				host: HASHNODE_HOSTNAME,
+				slug: slug
+			}
+		});
+
+		if (!blogPost.data?.publication?.post) {
+			error(404, { message: 'Blog post not found' });
+		}
+
+		return {
+			status: 200,
+			body: {
+				post: blogPost.data.publication.post
+			}
+		};
+	} catch (err) {
+		console.error('Error fetching blog post data:', err);
+		error(500, { message: 'Internal Server Error' });
+	}
+};

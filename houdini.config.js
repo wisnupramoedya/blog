@@ -2,13 +2,13 @@
 
 /** @type {import('houdini').ConfigFile} */
 const config = {
-    "watchSchema": {
-        "url": "https://gql.hashnode.com/"
-    },
-    "runtimeDir": ".houdini",
-    "plugins": {
-        "houdini-svelte": {}
-    }
-}
+	watchSchema: {
+		url: 'https://gql.hashnode.com/'
+	},
+	runtimeDir: '.houdini',
+	plugins: {
+		'houdini-svelte': {}
+	}
+};
 
-export default config
+export default config;

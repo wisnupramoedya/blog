@@ -8,12 +8,26 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex()],
 	kit: {
-        adapter: adapter(),
+		adapter: adapter({
+			isr: {
+				expiration: 60 * 60, // 1 hour
+				enabled: true
+			}
+		}),
 
-        alias: {
-            $houdini: ".houdini/"
-        }
-    },
+		alias: {
+			$houdini: '.houdini/'
+		}
+	},
+	csp: {
+		directives: {
+			'script-src': ['self'],
+		},
+		reportOnly: {
+			'script-src': ['self'],
+			'report-uri': ['/']
+		}
+	},
 	extensions: ['.svelte', '.svx']
 };
 

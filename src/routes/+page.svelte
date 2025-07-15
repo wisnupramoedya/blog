@@ -3,7 +3,7 @@
 	import Introduction from '../components/Introduction.svelte';
 	import type { PageServerData } from './$types';
 
-	let { data }: { data: PageServerData} = $props();
+	let { data }: { data: PageServerData } = $props();
 </script>
 
 <Introduction />
