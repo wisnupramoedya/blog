@@ -1,0 +1,20 @@
+query GetPostBySlugQuery($host: String!, $slug: String!) {
+	publication(host: $host) {
+		title
+		post(slug: $slug) {
+			id
+			slug
+			title
+			tags {
+				slug
+			}
+			coverImage {
+				url
+			}
+			views
+			content {
+				markdown
+			}
+		}
+	}
+}

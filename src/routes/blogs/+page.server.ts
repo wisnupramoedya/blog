@@ -3,15 +3,14 @@ import { GetPublicationQueryStore } from "$houdini"
 import type { LoadEvent } from "@sveltejs/kit";
 
 export const load = async (event: LoadEvent) => {
-  const MAX_POSTS = 3;
-  const host = HASHNODE_HOSTNAME;
+  const MAX_POSTS = 6;
   const getPublicationQuery = new GetPublicationQueryStore();
 
   try {
     const {data} = await getPublicationQuery.fetch({
       event,
       variables: {
-        host: host,
+        host: HASHNODE_HOSTNAME,
         first: MAX_POSTS,
       }
     })

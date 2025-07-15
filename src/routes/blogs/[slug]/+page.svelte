@@ -1,4 +1,11 @@
+<script lang="ts">
+	import Post from '../../../components/Post.svelte';
+    import type { PageServerData } from './$types';
+    
+    let { data }: { data: PageServerData } = $props();
+    let post = data.body?.post;
+</script>
+
 <section>
-    <h1>Post Slug</h1>
-    <p>Post content goes here...</p>
+    <Post {post} />
 </section>

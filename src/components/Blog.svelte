@@ -45,7 +45,7 @@
 	</p>
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-9 md:p-8">
 		{#each posts as post (post.id)}
-			<a href={`/blog/${post.slug}`} aria-label="{post.title}" class="block group">
+			<a href={`/blogs/${post.slug}`} aria-label="{post.title}" class="block group">
 				<div class="flex flex-col h-[25rem] transition-transform duration-300 ease-out group-hover:scale-105">
 					<div class="mb-4 md:mb-6 transition-transform duration-300 ease-out group-hover:translate-y-[-4px]">
 						<p class="text-secondary mb-2 transition-colors duration-300 group-hover:text-primary-200">{post.tags?.map(tag => '#' + tag.slug).join(' ')}</p>

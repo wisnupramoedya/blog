@@ -1,4 +1,10 @@
-<section>
-    <h1>Posts</h1>
-    <p>Post content goes here...</p>
-</section>
+<script lang="ts">
+	import Blog from "../../components/Blog.svelte";
+
+    
+	import type { PageServerData } from './$types';
+
+	let { data }: { data: PageServerData} = $props();
+</script>
+
+<Blog posts={data.posts} pageInfo={data.pageInfo} />
