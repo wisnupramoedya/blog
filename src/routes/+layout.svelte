@@ -6,7 +6,7 @@
 </script>
 
 <Nav />
-<main class="flex-1">
+<main class="flex-1 pt-6 md:pt-24">
 	{@render children()}
 </main>
 

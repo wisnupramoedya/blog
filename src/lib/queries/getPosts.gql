@@ -1,0 +1,27 @@
+query GetPublicationQuery($host: String!, $first: Int = 5) {
+	publication(host: $host) {
+		id
+		posts(first: $first) {
+			edges {
+				node {
+					id
+					slug
+					title
+					subtitle
+					tags {
+						id
+						slug
+					}
+					brief
+					coverImage {
+						url
+					}
+				}
+			}
+			pageInfo {
+				endCursor
+				hasNextPage
+			}
+		}
+	}
+}

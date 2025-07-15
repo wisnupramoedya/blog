@@ -2,7 +2,7 @@
 	import { icons } from '../data/socials.svelte';
 </script>
 
-<section class="custom-height px-8 md:px-32 pt-6 md:pt-24">
+<section class="custom-height px-8 md:px-32">
 	<div class="relative mt-16 md:mt-32">
 		<div class="absolute z-10 flex-1"></div>
 		<div
