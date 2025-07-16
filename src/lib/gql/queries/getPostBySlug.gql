@@ -19,6 +19,14 @@ query GetPostBySlugQuery($host: String!, $slug: String!) {
 			content {
 				markdown
 			}
+			features {
+				tableOfContents {
+					items {
+						slug
+						title
+					}
+				}
+			}
 		}
 	}
 }

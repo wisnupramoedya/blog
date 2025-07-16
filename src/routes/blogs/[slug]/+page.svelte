@@ -17,7 +17,7 @@
 	image={post?.coverImage?.url}
 />
 
-<section class="px-8 md:px-32 mb-48">
+<section class="px-8 md:px-32 mb-48 pt-10 md:pt-0">
 	<Breadcrumb
 		items={[
 			{ name: 'Home', url: '/' },
