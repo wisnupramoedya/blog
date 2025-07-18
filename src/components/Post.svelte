@@ -24,7 +24,7 @@
 		<!-- Meta information -->
 		<div class="flex flex-col md:flex-row md:items-center md:gap-8 mb-6">
 			<!-- Views -->
-			<Views blogSlug={post.slug} />
+			<Views slug={post.slug} />
 
 			<!-- Tags -->
 			<div class="flex gap-2">
