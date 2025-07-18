@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Blog from '../../components/Blog.svelte';
-	import Seo from '../../components/SEO.svelte';
+	import Blog from '@/components/Blog.svelte';
+	import Seo from '@/components/SEO.svelte';
 
 	import type { PageServerData } from './$types';
 

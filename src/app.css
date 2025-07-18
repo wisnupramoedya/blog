@@ -44,6 +44,7 @@ h4 {
 }
 
 a,
-p {
-	@apply font-montserrat text-base md:text-lg;
+p,
+code {
+	@apply font-montserrat text-sm md:text-base;
 }

@@ -15,7 +15,6 @@ query GetPostBySlugQuery($host: String!, $slug: String!) {
 			coverImage {
 				url
 			}
-			views
 			content {
 				markdown
 			}

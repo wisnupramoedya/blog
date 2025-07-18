@@ -1,11 +1,12 @@
 <script lang="ts">
-	import Breadcrumb from '../../../components/Breadcrumb.svelte';
-	import Post from '../../../components/Post.svelte';
-	import Seo from '../../../components/SEO.svelte';
+	import type { PostDetailType } from '$lib/types/post';
+	import Breadcrumb from '@/components/Breadcrumb.svelte';
+	import Post from '@/components/Post.svelte';
+	import Seo from '@/components/SEO.svelte';
 	import type { PageServerData } from './$types';
 
 	let { data }: { data: PageServerData } = $props();
-	let post = data.body?.post;
+	let post: PostDetailType = data.body?.post;
 </script>
 
 <Seo

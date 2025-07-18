@@ -16,7 +16,8 @@ const config = {
 		}),
 
 		alias: {
-			$houdini: '.houdini/'
+			$houdini: '.houdini/',
+			'@/*': 'src/*',
 		}
 	},
 	csp: {

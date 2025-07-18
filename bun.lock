@@ -6,6 +6,7 @@
       "dependencies": {
         "@supabase/supabase-js": "^2.51.0",
         "@tailwindcss/vite": "^4.1.11",
+        "highlight.js": "^11.11.1",
         "svelte-exmarkdown": "^5.0.1",
         "tailwindcss": "^4.1.11",
       },
@@ -557,6 +558,8 @@
     "graphql-yoga": ["graphql-yoga@4.0.5", "", { "dependencies": { "@envelop/core": "^4.0.0", "@graphql-tools/executor": "^1.0.0", "@graphql-tools/schema": "^10.0.0", "@graphql-tools/utils": "^10.0.0", "@graphql-yoga/logger": "^1.0.0", "@graphql-yoga/subscription": "^4.0.0", "@whatwg-node/fetch": "^0.9.7", "@whatwg-node/server": "^0.9.1", "dset": "^3.1.1", "lru-cache": "^10.0.0", "tslib": "^2.5.2" }, "peerDependencies": { "graphql": "^15.2.0 || ^16.0.0" } }, "sha512-vIbJU9QX5RP4PoxbMCHcfOlt/3EsC/0uLdAOlKaiUvlwJDTFCaIHo2X10vL4i/27Gw8g90ECIwm2YbmeLDwcqg=="],
 
     "has-flag": ["has-flag@4.0.0", "", {}, "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="],
+
+    "highlight.js": ["highlight.js@11.11.1", "", {}, "sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w=="],
 
     "houdini": ["houdini@1.5.9", "", { "dependencies": { "@babel/parser": "^7.24.6", "@clack/prompts": "^0.6.3", "@graphql-tools/merge": "^9.0.0", "@graphql-tools/schema": "^9.0.4", "@kitql/helpers": "^0.8.2", "@types/estree": "^1.0.0", "@types/fs-extra": "^9.0.13", "@types/micromatch": "^4.0.2", "@ungap/structured-clone": "^1.0.2", "@whatwg-node/server": "^0.9.14", "ast-types": "^0.16.1", "commander": "^9.4.0", "deepmerge": "^4.2.2", "estree-walker": "^3.0.1", "fs-extra": "^10.1.0", "glob": "^11.0.1", "graphql": "^15.8.0", "graphql-yoga": "^4.0.4", "memfs": "^3.4.7", "micromatch": "^4.0.5", "minimatch": "^5.1.0", "node-fetch": "^3.2.10", "npx-import": "^1.1.3", "recast": "^0.23.1", "vite-plugin-watch-and-run": "^1.7.0" }, "peerDependencies": { "vite": "^5.3.3 || ^6.0.3" }, "bin": { "houdini": "build/cmd-esm/index.js" } }, "sha512-yPqztL0RcElNEQHF/MrwEQ9pqwR6Zxpp+ORf/r4xIfguxCCzMCZ6PrMUIFFFwDAfk49WZeOYwcdrajLGc2Lczw=="],
 

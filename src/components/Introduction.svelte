@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { icons } from '../data/socials.svelte';
+	import { icons } from '@/data/socials.svelte';
 </script>
 
 <section class="custom-height px-8 md:px-32">
