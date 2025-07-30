@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PostDetailType } from '$lib/types/post';
-	import Breadcrumb from '@/components/Breadcrumb.svelte';
-	import Post from '@/components/Post.svelte';
-	import Seo from '@/components/SEO.svelte';
+	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
+	import Post from '$lib/components/Post.svelte';
+	import Seo from '$lib/components/SEO.svelte';
 	import type { PageServerData } from './$types';
 
 	let { data }: { data: PageServerData } = $props();

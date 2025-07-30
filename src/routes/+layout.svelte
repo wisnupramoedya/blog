@@ -1,8 +1,8 @@
 <script lang="ts">
 	const { children } = $props();
 	import '@/app.css';
-	import Footer from '@/layouts/Footer.svelte';
-	import Nav from '@/layouts/Nav.svelte';
+	import Footer from '$lib/layouts/Footer.svelte';
+	import Nav from '$lib/layouts/Nav.svelte';
 </script>
 
 <Nav />

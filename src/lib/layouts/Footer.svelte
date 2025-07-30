@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { icons } from '../data/socials.svelte';
+	import { icons } from '../../data/socials.svelte';
 
 	let currentYear = new Date().getFullYear();
 </script>

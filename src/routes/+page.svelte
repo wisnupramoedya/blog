@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Blog from '../components/Blog.svelte';
-	import Introduction from '../components/Introduction.svelte';
-	import Seo from '../components/SEO.svelte';
+	import Blog from '$lib/components/Blog.svelte';
+	import Introduction from '$lib/components/Introduction.svelte';
+	import Seo from '$lib/components/SEO.svelte';
 	import type { PageServerData } from './$types';
 
 	let { data }: { data: PageServerData } = $props();
