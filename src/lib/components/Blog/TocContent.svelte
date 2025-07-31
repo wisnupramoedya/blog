@@ -9,7 +9,6 @@
 </script>
 
 <nav class="p-4">
-	<h3 class="font-semibold text-gray-900 mb-4">Table of Contents</h3>
 	<ul class="space-y-2 text-sm">
 		{#each toc as item (item.id)}
 			<li style="margin-left: {(item.level - 2) * 1}rem">

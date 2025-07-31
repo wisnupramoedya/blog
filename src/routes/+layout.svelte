@@ -13,6 +13,15 @@
 <Footer />
 
 <style>
+	:global(html) {
+		scroll-padding-top: 2.5rem;
+	}
+
+	@media (min-width: 768px) {
+		:global(html) {
+			scroll-padding-top: 6rem;
+		}
+	}
 	:global(body) {
 		display: flex;
 		flex-direction: column;
