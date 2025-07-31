@@ -1,17 +1,16 @@
-import { GetAllPostSlugsQueryStore } from '$houdini';
-import type { LoadEvent } from '@sveltejs/kit';
+import type { ApiPosts, ApiResponse } from '@/lib/types/api';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function GET(event: LoadEvent) {
-	const getAllPostSlugs = new GetAllPostSlugsQueryStore();
-	const query = await getAllPostSlugs.fetch({
-		event,
-		variables: {
-			host: 'wisnupram.com',
-			first: 10
+export const GET: RequestHandler = async ({ fetch }) => {
+	const {
+		data: { posts }
+	} = await fetch('/api/posts').then((response) => {
+		if (!response.ok) {
+			throw new Error('Failed to fetch posts');
 		}
+		return response.json() as Promise<ApiResponse<ApiPosts>>;
 	});
 
-	const posts = query.data?.publication?.posts.edges.map((edge) => edge.node) || [];
 	const pages = ['/', '/blogs'];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -32,7 +31,7 @@ export async function GET(event: LoadEvent) {
 						(post) => `
             <url>
                 <loc>https://wisnupram.com/blogs/${post.slug}</loc>
-                <lastmod>${post.updatedAt || post.publishedAt}</lastmod>
+                <lastmod>${post.updated || post.date}</lastmod>
                 <changefreq>weekly</changefreq>
                 <priority>0.6</priority>
             </url>
@@ -46,4 +45,4 @@ export async function GET(event: LoadEvent) {
 			'Content-Type': 'application/xml'
 		}
 	});
-}
+};

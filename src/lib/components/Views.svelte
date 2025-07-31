@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createViewsStore } from '$lib/stores/viewsStore.svelte';
 	import type { ViewsProps } from '$lib/types/views';
-	import { formatViews, getViewsLabel } from '$lib/utils/formatters';
+	import { formatViews, getViewsLabel } from '@/lib/utils/view';
 
 	let { slug }: ViewsProps = $props();
 

@@ -1,20 +1,45 @@
-export interface BlogProps {
-  posts: PostType[];
-  pageInfo: PageInfoType;
-  class?: string;
+import type { Component } from 'svelte';
+
+export interface Author {
+	name: string;
+	avatar?: string;
+	bio?: string;
+	social?: {
+		twitter?: string;
+		github?: string;
+		linkedin?: string;
+	};
 }
 
-interface PostType {
-  id: string;
-  slug: string;
-  title: string;
-  tags: { slug: string }[] | null;
-  coverImage: {
-    url: string;
-  } | null;
+export interface SEO {
+	keywords?: string;
+	canonical?: string;
+	ogImage?: string;
 }
 
-interface PageInfoType {
-  hasNextPage: boolean | null;
-  endCursor: string | null;
+export interface BlogPost {
+	slug: string;
+	title: string;
+	description: string;
+	date: string;
+	updated?: string;
+	author?: Author;
+	tags: string[];
+	categories: string[];
+	featured?: boolean;
+	draft?: boolean;
+	cover?: string;
+	readingTime: number;
+	seo?: SEO;
+}
+
+export interface TableOfContentsItem {
+	level: number;
+	id: string;
+	text: string;
+}
+
+export interface BlogPostModule {
+	metadata: Omit<BlogPost, 'slug'>;
+	default: Component; // Svelte component
 }

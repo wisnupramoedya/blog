@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { BlogProps } from '@/lib/types/blog';
+	import type { PostListProps } from '../../types/post';
 
-	let { posts, pageInfo, class: className = '' }: BlogProps = $props();
+	let { posts, pageInfo, class: className = '' }: PostListProps = $props();
 </script>
 
 <section class="px-8 md:px-32 py-24 {className}">
@@ -10,8 +10,8 @@
 		I learned and recorded all my learnings through blog posts
 	</p>
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-9 md:p-8">
-		{#each posts as post (post.id)}
-			<a href={`/blogs/${post.slug}`} aria-label={post.title} class="block group">
+		{#each posts as post (post.slug)}
+			<a href={`/posts/${post.slug}`} aria-label={post.title} class="block group">
 				<div
 					class="flex flex-col h-[25rem] transition-transform duration-300 ease-out group-hover:scale-105"
 				>
@@ -21,7 +21,7 @@
 						<p
 							class="text-secondary mb-2 transition-colors duration-300 group-hover:text-primary-200"
 						>
-							{post.tags?.map((tag) => '#' + tag.slug).join(' ')}
+							{post.tags?.map((tag) => '#' + tag).join(' ')}
 						</p>
 						<h3 class="text-primary-100 transition-colors duration-300 group-hover:text-white">
 							{post.title}
@@ -31,7 +31,7 @@
 						class="flex-1 bg-primary-600 rounded-tl-2xl overflow-hidden transition-all duration-300 ease-out group-hover:shadow-lg group-hover:shadow-primary-600/25"
 					>
 						<img
-							src={post.coverImage?.url || 'https://picsum.photos/seed/picsum/400/300'}
+							src={post.cover || 'https://picsum.photos/seed/picsum/400/300'}
 							alt={post.title}
 							class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
 						/>

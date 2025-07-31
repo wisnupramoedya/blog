@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Blog from '$lib/components/Blog.svelte';
 	import Introduction from '$lib/components/Introduction.svelte';
 	import Seo from '$lib/components/SEO.svelte';
+	import PostList from '@/lib/components/Blog/PostList.svelte';
 	import type { PageServerData } from './$types';
 
 	let { data }: { data: PageServerData } = $props();
@@ -16,4 +16,4 @@
 />
 
 <Introduction />
-<Blog class="bg-primary-800" posts={data.posts} pageInfo={data.pageInfo} />
+<PostList class="bg-primary-800" posts={data.posts} pageInfo={data.pageInfo} />

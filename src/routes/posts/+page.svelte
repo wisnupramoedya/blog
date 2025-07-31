@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Blog from '$lib/components/Blog.svelte';
 	import Seo from '$lib/components/SEO.svelte';
+	import PostList from '@/lib/components/Blog/PostList.svelte';
+	import type { PageProps } from './$types';
 
-	import type { PageServerData } from './$types';
-
-	let { data }: { data: PageServerData } = $props();
+	let { data }: PageProps = $props();
 </script>
 
 <Seo
@@ -15,4 +14,4 @@
 	type="website"
 />
 
-<Blog posts={data.posts} pageInfo={data.pageInfo} />
+<PostList posts={data.posts} pageInfo={data.pageInfo} />

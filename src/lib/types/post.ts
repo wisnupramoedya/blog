@@ -1,31 +1,14 @@
-export interface PostProps {
-  class?: string
-  post: PostDetailType;
+import type { PageInfo } from './api';
+import type { BlogPost } from './blog';
+
+export interface PostListProps {
+	posts: BlogPost[];
+	pageInfo?: PageInfo;
+	class?: string;
 }
 
-export interface PostDetailType {
-  id: string;
-  slug: string;
-  title: string;
-  seo: {
-    title: string | null;
-    description: string | null;
-  } | null
-  tags: {
-    slug: string;
-  }[] | null
-  coverImage: {
-    url: string;
-  } | null;
-  content: {
-    markdown: string;
-  }
-  features: {
-    tableOfContents: {
-      items: {
-        slug: string;
-        title: string;
-      }[]
-    }
-  }
+export interface PostProps {
+	meta: BlogPost;
+	content: string;
+	class?: string;
 }
