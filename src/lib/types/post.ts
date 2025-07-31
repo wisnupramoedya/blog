@@ -12,3 +12,7 @@ export interface PostProps {
 	content: string;
 	class?: string;
 }
+
+export interface PostContentProps {
+	content: string;
+}

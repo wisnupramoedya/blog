@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PostProps } from '@/lib/types/post';
 	import Views from '../Views.svelte';
+	import Content from './Content.svelte';
 
 	// Props yang diterima dari parent component
 	let { meta, content, class: className = '' }: PostProps = $props();
@@ -41,9 +42,6 @@
 		</div>
 
 		<!-- Content -->
-		<div class="prose max-w-none">
-			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-			{@html content}
-		</div>
+		<Content {content} />
 	</div>
 </article>

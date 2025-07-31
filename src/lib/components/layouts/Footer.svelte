@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { icons } from '../../data/socials.svelte';
+	import { icons } from '../../../data/socials.svelte';
 
 	let currentYear = new Date().getFullYear();
 </script>
 
-<footer class="bg-primary-800 text-white py-6 md:py-16 px-8 md:px-32">
+<footer class="bg-prime-800 text-white py-6 md:py-16 px-8 md:px-32">
 	<div class="mb-8 md:mb-16">
 		<h2 class="font-bold mb-2 md:mb-6">Get In Touch</h2>
-		<p class="text-primary-300 leading-relaxed">
+		<p class="text-prime-300 leading-relaxed">
 			Stay connected with me and let's know more about my service and more explorer me on this
 		</p>
 
@@ -18,7 +18,7 @@
 					href={icon.link}
 					target="_blank"
 					aria-label="{icon.name} Profile"
-					class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-800 transition-colors duration-300"
+					class="w-12 h-12 bg-prime-600 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-800 transition-colors duration-300"
 				>
 					<span class="{icon.icon} w-6 h-6"></span>
 				</a>

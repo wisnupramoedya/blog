@@ -37,7 +37,7 @@
 </script>
 
 <nav
-	class={`fixed top-0 z-50 flex w-full items-center justify-between px-8 md:px-32 text-white transition-all duration-300 ${scrolled ? 'bg-primary-700 py-4 shadow-lg' : 'py-8'}`}
+	class={`fixed top-0 z-50 flex w-full items-center justify-between px-8 md:px-32 text-white transition-all duration-300 ${scrolled ? 'bg-prime-700 py-4 shadow-lg' : 'py-8'}`}
 >
 	<div>
 		<a href="/" class="transition-transform duration-300 hover:scale-105">
@@ -51,7 +51,7 @@
 			<a href="/">Home</a>
 		</li>
 		<li class={`${activeLi('/blogs')} transition-all duration-300 hover:text-white/90`}>
-			<a href="/blogs">Blogs</a>
+			<a href="/posts">Blogs</a>
 		</li>
 	</ul>
 
@@ -87,7 +87,7 @@
 	<!-- Mobile Menu Overlay -->
 	<div
 		bind:this={mobileMenu}
-		class={`fixed top-0 right-0 h-full w-64 bg-primary-700 z-50 transform transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+		class={`fixed top-0 right-0 h-full w-64 bg-prime-700 z-50 transform transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
 	>
 		<div class="flex flex-col pt-24 px-8">
 			<a

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Breadcrumb from '@/lib/components/Blog/Breadcrumb.svelte';
-	import Post from '@/lib/components/Blog/Post.svelte';
-	import TableOfContents from '@/lib/components/Blog/TableOfContents.svelte';
+	import Breadcrumb from '@/lib/components/blog/Breadcrumb.svelte';
+	import Post from '@/lib/components/blog/Post.svelte';
+	import Toc from '@/lib/components/blog/Toc.svelte';
 	import Seo from '@/lib/components/SEO.svelte';
 
 	const { data } = $props();
@@ -25,7 +25,7 @@
 			{ name: meta.title || 'Blog Post', url: `/posts/${meta.slug}` }
 		]}
 	/>
-	<TableOfContents {toc} />
+	<Toc {toc} />
 
 	<Post {meta} {content} />
 </section>
