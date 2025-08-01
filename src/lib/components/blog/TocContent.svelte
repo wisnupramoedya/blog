@@ -14,7 +14,7 @@
 			<li style="margin-left: {(item.level - 2) * 1}rem">
 				<button
 					class="text-left text-white hover:font-bold transition-colors w-full cursor-pointer"
-					class:font-semibold={activeId === item.id}
+					class:font-bold={activeId === item.id}
 					class:text-blue-600={activeId === item.id}
 					onclick={() => handleClick(item.id)}
 				>
