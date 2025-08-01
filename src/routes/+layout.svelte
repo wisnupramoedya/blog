@@ -14,12 +14,12 @@
 
 <style>
 	:global(html) {
-		scroll-padding-top: 2.5rem;
+		scroll-padding-top: 3.25rem;
 	}
 
 	@media (min-width: 768px) {
 		:global(html) {
-			scroll-padding-top: 6rem;
+			scroll-padding-top: 4rem;
 		}
 	}
 	:global(body) {

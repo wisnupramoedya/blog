@@ -61,10 +61,8 @@
 {#if toc.length > 0}
 	<!-- Desktop: Fixed TOC -->
 	{#if isDesktop}
-		<div
-			class="fixed top-24 right-4 bg-white border border-gray-200 rounded-lg shadow-lg max-w-xs z-50"
-		>
-			<h3 class="font-semibold text-gray-900 mb-4">Table of Contents</h3>
+		<div class="absolute top-0 right-0 rounded-lg p-3 shadow-lg max-w-xs z-10 ml-4">
+			<h5 class="font-semibold text-lower mb-2">Table of Contents</h5>
 			<TocContent {toc} {handleClick} {activeId} />
 		</div>
 	{:else}
@@ -74,11 +72,11 @@
 				<Sheet.Trigger>
 					<Button variant="outline" size="icon" class="bg-white shadow-lg">AA</Button>
 				</Sheet.Trigger>
-				<Sheet.Content side="right" class="w-80">
+				<Sheet.Content side="right" class="bg-prime-700 w-80 gap-0">
 					<Sheet.Header>
-						<Sheet.Title>Table of Contents</Sheet.Title>
+						<Sheet.Title class="text-lower">Table of Contents</Sheet.Title>
 					</Sheet.Header>
-					<div class="mt-4">
+					<div class="px-4">
 						<TocContent {toc} {handleClick} {activeId} />
 					</div>
 				</Sheet.Content>

@@ -13,7 +13,7 @@
 		{#each toc as item (item.id)}
 			<li style="margin-left: {(item.level - 2) * 1}rem">
 				<button
-					class="text-left text-gray-600 hover:text-gray-900 transition-colors w-full"
+					class="text-left text-white hover:font-bold transition-colors w-full cursor-pointer"
 					class:font-semibold={activeId === item.id}
 					class:text-blue-600={activeId === item.id}
 					onclick={() => handleClick(item.id)}

@@ -28,7 +28,7 @@
 			<Views slug={meta.slug} />
 
 			<!-- Tags -->
-			<div class="flex gap-2">
+			<div class="flex flex-wrap gap-2">
 				{#if !meta.tags || meta.tags.length === 0}
 					<p class="text-gray-400">No tags available</p>
 				{:else}

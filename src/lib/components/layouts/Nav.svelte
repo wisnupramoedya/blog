@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	let isMenuOpen = $state(false);
 	let mobileMenu: HTMLDivElement;
+	let scrolled = $state(false);
 
 	const handleScroll = () => {
 		if (window.scrollY > 50) {
@@ -32,7 +33,6 @@
 		}
 	}
 
-	let scrolled = $state(false);
 	const activeLi = (path: string) => (path === page.url.pathname ? 'font-bold' : 'hover:font-bold');
 </script>
 
@@ -50,7 +50,7 @@
 		<li class={`${activeLi('/')} transition-all duration-300 hover:text-white/90`}>
 			<a href="/">Home</a>
 		</li>
-		<li class={`${activeLi('/blogs')} transition-all duration-300 hover:text-white/90`}>
+		<li class={`${activeLi('/posts')} transition-all duration-300 hover:text-white/90`}>
 			<a href="/posts">Blogs</a>
 		</li>
 	</ul>
@@ -98,8 +98,8 @@
 				Home
 			</a>
 			<a
-				href="/blogs"
-				class={`${activeLi('/blogs')} py-4 text-lg transition-all duration-300 hover:text-white/90`}
+				href="/posts"
+				class={`${activeLi('/posts')} py-4 text-lg transition-all duration-300 hover:text-white/90`}
 				onclick={closeMenu}
 			>
 				Blogs

@@ -25,7 +25,21 @@
 			{ name: meta.title || 'Blog Post', url: `/posts/${meta.slug}` }
 		]}
 	/>
-	<Toc {toc} />
+	<div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+		<div class="min-w-0">
+			<Post {meta} {content} />
+		</div>
 
-	<Post {meta} {content} />
+		<!-- TOC sidebar - hidden on mobile, shows on desktop -->
+		<div class="hidden lg:block">
+			<div class="sticky top-24">
+				<Toc {toc} />
+			</div>
+		</div>
+
+		<!-- Mobile TOC trigger -->
+		<div class="lg:hidden">
+			<Toc {toc} />
+		</div>
+	</div>
 </section>

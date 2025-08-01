@@ -30,16 +30,18 @@
 	<div class="border-t border-gray-600 pt-8">
 		<div class="flex flex-col md:flex-row justify-between items-center">
 			<!-- Logo/Name -->
-			<div class="flex items-center mb-4 md:mb-0">
-				<span class="font-bold mr-3">😊</span>
-				<h3>Wisnu Pramoedya</h3>
-			</div>
+			<a href="/">
+				<div class="flex items-center mb-4 md:mb-0">
+					<span class="font-bold mr-3">😊</span>
+					<h3>Wisnu Pramoedya</h3>
+				</div>
+			</a>
 
 			<!-- Copyright -->
-			<h4>
-				© <a href="/" class="text-yellow-400">Wisnu Pramoedya</a>
+			<p>
+				© <a href="/" class="font-bold text-yellow-400">Wisnu Pramoedya</a>
 				{currentYear} all rights reserved
-			</h4>
+			</p>
 		</div>
 	</div>
 </footer>
