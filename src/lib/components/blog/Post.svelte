@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PostProps } from '$lib/types/post';
+	import Giscus from '@giscus/svelte';
 	import Views from '../Views.svelte';
 	import Content from './Content.svelte';
 
@@ -43,5 +44,25 @@
 
 		<!-- Content -->
 		<Content {content} />
+
+		<!-- Comment -->
+		<div class="mt-10">
+			<Giscus
+				id="comment"
+				term="Welcome"
+				repo="wisnupramoedya/blog"
+				repoId="R_kgDOPMC0mg"
+				category="Announcements"
+				categoryId="DIC_kwDOPMC0ms4CtqO7"
+				mapping="title"
+				strict="0"
+				reactionsEnabled="1"
+				emitMetadata="0"
+				inputPosition="top"
+				theme="dark"
+				lang="en"
+				loading="lazy"
+			/>
+		</div>
 	</div>
 </article>

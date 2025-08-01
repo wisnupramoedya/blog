@@ -8,7 +8,8 @@
 
 	let activeId = $state('');
 	let isDrawerOpen = $state(false);
-	let isDesktop = $state(true);
+	let isMounted = $state(false);
+	let isDesktop = $state<boolean>();
 
 	function handleClick(id: string) {
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -23,6 +24,7 @@
 	}
 
 	$effect(() => {
+		isMounted = true;
 		checkScreenSize();
 
 		// Listen for screen size changes
@@ -58,7 +60,7 @@
 	});
 </script>
 
-{#if toc.length > 0}
+{#if isMounted && toc.length > 0}
 	<!-- Desktop: Fixed TOC -->
 	{#if isDesktop}
 		<div class="absolute top-0 right-0 rounded-lg p-3 shadow-lg max-w-xs z-10 ml-4">
@@ -67,12 +69,14 @@
 		</div>
 	{:else}
 		<!-- Mobile: Drawer trigger -->
-		<div class="fixed top-1/2 right-4 z-50 -translate-y-1/2">
+		<div class="fixed top-1/2 right-0 z-50 -translate-y-1/2">
 			<Sheet.Root bind:open={isDrawerOpen}>
 				<Sheet.Trigger>
-					<Button variant="outline" size="icon" class="bg-white shadow-lg">AA</Button>
+					<Button variant="link" size="icon" class="bg-lower shadow-lg cursor-pointer"
+						><span class="icon-[fa6-regular--circle-left] w-6 h-6"></span></Button
+					>
 				</Sheet.Trigger>
-				<Sheet.Content side="right" class="bg-prime-700 w-80 gap-0">
+				<Sheet.Content side="right" class="bg-prime-700 w-80 gap-0 text-white border-none">
 					<Sheet.Header>
 						<Sheet.Title class="text-lower">Table of Contents</Sheet.Title>
 					</Sheet.Header>

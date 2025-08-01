@@ -34,7 +34,11 @@
 
 				{#if index === items.length - 1}
 					<!-- Current page - not clickable -->
-					<span class="text-white cursor-default" itemprop="name" aria-current="page">
+					<span
+						class="text-white cursor-default max-w-24 sm:max-w-32 md:max-w-48 truncate"
+						itemprop="name"
+						aria-current="page"
+					>
 						{item.name}
 					</span>
 				{:else}
@@ -42,7 +46,7 @@
 					<a
 						itemprop="item"
 						href={item.url}
-						class="text-gray-300 hover:text-white transition-colors duration-200 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded px-1"
+						class="text-gray-300 hover:text-white max-w-24 sm:max-w-32 md:max-w-48 truncate transition-colors duration-200 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 rounded px-1"
 					>
 						<span itemprop="name">{item.name}</span>
 					</a>

@@ -8,7 +8,7 @@
 	export let siteName = 'Wisnu Pram';
 	export let twitterHandle = '@wisnupramoedya';
 
-	const fullTitle = title ? `${title} • ${siteName}` : siteName;
+	const fullTitle = title ? `${title}` : siteName;
 	const fullUrl = url ? `https://wisnupram.com${url}` : 'https://wisnupram.com';
 	const fullImage = image
 		? `https://wisnupram.com${image}`
