@@ -1,4 +1,4 @@
-import type { BlogPost, TableOfContentsItem } from '@/lib/types/blog';
+import type { BlogPost, TableOfContentsItem } from '$lib/types/blog';
 
 export function calculateReadingTime(html: string): number {
 	const wordsPerMinute = 200;

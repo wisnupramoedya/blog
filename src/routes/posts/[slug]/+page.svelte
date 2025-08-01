@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Breadcrumb from '@/lib/components/blog/Breadcrumb.svelte';
-	import Post from '@/lib/components/blog/Post.svelte';
-	import Toc from '@/lib/components/blog/Toc.svelte';
-	import Seo from '@/lib/components/SEO.svelte';
+	import Breadcrumb from '$lib/components/blog/Breadcrumb.svelte';
+	import Post from '$lib/components/blog/Post.svelte';
+	import Toc from '$lib/components/blog/Toc.svelte';
+	import Seo from '$lib/components/SEO.svelte';
 
 	const { data } = $props();
 	const { content, meta, toc } = data;

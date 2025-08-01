@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TableOfContentsItem } from '@/lib/types/blog';
+	import type { TableOfContentsItem } from '$lib/types/blog';
 
 	let {
 		toc,

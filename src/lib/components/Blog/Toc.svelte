@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import * as Sheet from '$lib/components/ui/sheet';
-	import type { TableOfContentsItem } from '@/lib/types/blog';
+	import type { TableOfContentsItem } from '$lib/types/blog';
 	import TocContent from './TocContent.svelte';
 
 	const { toc }: { toc: TableOfContentsItem[] } = $props();

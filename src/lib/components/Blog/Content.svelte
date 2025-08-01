@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PostContentProps } from '@/lib/types/post';
+	import type { PostContentProps } from '$lib/types/post';
 	import hljs from 'highlight.js';
 	import 'highlight.js/styles/github-dark.css';
 

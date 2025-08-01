@@ -1,4 +1,4 @@
-import type { ApiPosts, ApiResponse } from '@/lib/types/api';
+import type { ApiPosts, ApiResponse } from '$lib/types/api';
 
 export const load = async ({ fetch }) => {
 	const json = await fetch('/api/posts').then((response) => {

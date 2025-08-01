@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PostProps } from '@/lib/types/post';
+	import type { PostProps } from '$lib/types/post';
 	import Views from '../Views.svelte';
 	import Content from './Content.svelte';
 

@@ -1,5 +1,5 @@
+import type { ApiPosts, ApiResponse } from '$lib/types/api';
 import type { PageServerLoad } from './$types';
-import type { ApiPosts, ApiResponse } from '@/lib/types/api';
 
 export const load: PageServerLoad = async ({ fetch }) => {
 	const json = await fetch('/api/posts').then((response) => {
@@ -8,6 +8,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
 		}
 		return response.json() as Promise<ApiResponse<ApiPosts>>;
 	});
+	
 
 	return {
 		posts: json.data.posts,

@@ -47,10 +47,6 @@ const config = {
 				enabled: true
 			}
 		}),
-
-		alias: {
-			'@/*': 'src/*'
-		}
 	},
 	csp: {
 		directives: {

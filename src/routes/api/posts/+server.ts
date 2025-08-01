@@ -1,14 +1,15 @@
 import { dev } from '$app/environment';
-import { calculateReadingTime, sortPostsByDate } from '@/lib/server/utils/blog';
-import type { ApiPosts, ApiResponse } from '@/lib/types/api';
-import type { BlogPost, BlogPostModule } from '@/lib/types/blog';
+import { calculateReadingTime, sortPostsByDate } from '$lib/server/utils/blog';
+import type { ApiPosts, ApiResponse } from '$lib/types/api';
+import type { BlogPost, BlogPostModule } from '$lib/types/blog';
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { render } from 'svelte/server';
 
 async function getPosts() {
-	const modules = import.meta.glob<BlogPostModule>('/src/data/posts/*.md', {
+	const modules = import.meta.glob<BlogPostModule>('/src/lib/data/posts/*.md', {
 		eager: true
 	});
+	
 
 	const posts: BlogPost[] = Object.entries(modules)
 		.map(([path, module]) => {
@@ -32,6 +33,7 @@ async function getPosts() {
 			}
 			return dev || !post.draft;
 		});
+	
 
 	return sortPostsByDate(posts);
 }

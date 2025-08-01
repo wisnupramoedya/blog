@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/SEO.svelte';
-	import PostList from '@/lib/components/blog/PostList.svelte';
+	import PostList from '$lib/components/blog/PostList.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
