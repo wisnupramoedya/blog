@@ -25,9 +25,9 @@ SvelteKit adalah framework full-stack yang powerful...
 
 ## Fitur Utama
 
-- [x] Server-side rendering
-- [x] Static site generation
-- [ ] Streaming (coming soon)
+- ✅ Server-side rendering
+- ✅ Static site generation
+- ⬜ Streaming (coming soon)
 
 | Feature        | SvelteKit | Next.js |
 | -------------- | --------- | ------- |

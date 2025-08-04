@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
+import { enhancedImages } from 'mdsvex-enhanced-images';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
@@ -15,6 +16,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md', '.svx'],
 			remarkPlugins: [
+				enhancedImages,
 				remarkGfm, // Tables, strikethrough, task lists, etc.
 				[
 					remarkGithub,

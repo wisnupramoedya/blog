@@ -64,7 +64,7 @@
 	<!-- Desktop: Fixed TOC -->
 	{#if isDesktop}
 		<div class="absolute top-0 right-0 rounded-lg p-3 shadow-lg max-w-xs z-10 ml-4">
-			<h5 class="font-semibold text-lower mb-2">Table of Contents</h5>
+			<p class="font-semibold text-lower mb-2">Table of Contents</p>
 			<TocContent {toc} {handleClick} {activeId} />
 		</div>
 	{:else}
