@@ -56,10 +56,12 @@ $$ LANGUAGE SQL;
 
 ### 4. Dapatkan API Keys
 
-1. Buka **Project Settings** > **API**
+1. Buka **Project Settings** > **Data API**
 2. Catat nilai berikut:
    - **Project URL** → `SUPABASE_URL`
-   - **anon public key** → `SUPABASE_ANON_KEY`
+3. Buka **Project Settings** > **API Keys**
+4. Catat nilai berikut
+   - **Publishable key** → `SUPABASE_ANON_KEY`
 
 ## Vercel Deployment
 
@@ -73,10 +75,10 @@ $$ LANGUAGE SQL;
 
 Di halaman konfigurasi project, tambahkan environment variables:
 
-| Name | Value |
-|------|-------|
-| `SUPABASE_URL` | `https://xxxxx.supabase.co` |
-| `SUPABASE_ANON_KEY` | `eyJhbGciOiJIUzI1NiIs...` |
+| Name                | Value                       |
+| ------------------- | --------------------------- |
+| `SUPABASE_URL`      | `https://xxxxx.supabase.co` |
+| `SUPABASE_ANON_KEY` | `sb_publishable_nT...`      |
 
 ### 3. Deploy
 
@@ -90,7 +92,7 @@ Buat file `.env` di root project:
 
 ```env
 SUPABASE_URL=https://xxxxx.supabase.co
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
+SUPABASE_ANON_KEY=sb_publishable_nT...
 ```
 
 > **Catatan**: File `.env` sudah ada di `.gitignore`, jadi tidak akan ter-commit.
