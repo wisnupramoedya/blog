@@ -72,9 +72,15 @@
 		<div class="fixed top-1/2 right-0 z-50 -translate-y-1/2">
 			<Sheet.Root bind:open={isDrawerOpen}>
 				<Sheet.Trigger>
-					<Button variant="link" size="icon" class="bg-lower shadow-lg cursor-pointer"
-						><span class="icon-[fa6-regular--circle-left] w-6 h-6"></span></Button
+					<Button
+						variant="link"
+						size="icon"
+						class="bg-lower shadow-lg cursor-pointer size-10"
+						aria-label="Open Table of Contents"
+						id="toc-trigger"
 					>
+						<span class="icon-[fa6-regular--circle-left] size-8"></span>
+					</Button>
 				</Sheet.Trigger>
 				<Sheet.Content side="right" class="bg-prime-700 w-80 gap-0 text-white border-none">
 					<Sheet.Header>
